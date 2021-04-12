@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres
     container_name: postgres
-    hostname: postgres-db
+    hostname: postgres
     ports:
       - 5432:5432
     environment:
@@ -44,7 +44,7 @@ services:
       - "server"
       - "--host=0.0.0.0"
       - "--port=5000"
-      - "--backend-store-uri=postgresql://postgres:postgres@postgres-db:5432/postgres"
+      - "--backend-store-uri=postgresql://postgres:postgres@postgres:5432/postgres"
       - "--default-artifact-root=wasbs://model-container@devstoreaccount1.blob.core.windows.net"
     environment:
       AZURE_STORAGE_CONNECTION_STRING: "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://azurite:10000/devstoreaccount1;QueueEndpoint=http://azurite:10001/devstoreaccount1"
