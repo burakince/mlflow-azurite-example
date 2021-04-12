@@ -17,9 +17,17 @@ export AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=http;AccountNam
 export MLFLOW_TRACKING_URI="http://localhost:5000"
 ```
 
-## Windows
+## Windows - Command Prompt
 
 ```powershell
 set AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://localhost:10000/devstoreaccount1;QueueEndpoint=http://localhost:10001/devstoreaccount1"
-set MLFLOW_TRACKING_URI="http://localhost:5000"
+set MLFLOW_TRACKING_URI=http://localhost:5000
+```
+
+# Cleanup
+
+If you need to remove all old works like blob storage data and MLFlow metadata from the PostgreSQL DB, please run the following command to remove all volumes from your system.
+
+```
+
 ```
